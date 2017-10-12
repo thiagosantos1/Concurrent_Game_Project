@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://projeto_2/" targetNamespace="http://projeto_2/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="adminJogo" type="tns:adminJogo" />
+  <xs:element name="adminJogoResponse" type="tns:adminJogoResponse" />
+  <xs:element name="checarResposta" type="tns:checarResposta" />
+  <xs:element name="checarRespostaResponse" type="tns:checarRespostaResponse" />
+  <xs:element name="desistirJogo" type="tns:desistirJogo" />
+  <xs:element name="desistirJogoResponse" type="tns:desistirJogoResponse" />
+  <xs:element name="gameOver" type="tns:gameOver" />
+  <xs:element name="gameOverResponse" type="tns:gameOverResponse" />
+  <xs:element name="getDesafioItaliano" type="tns:getDesafioItaliano" />
+  <xs:element name="getDesafioItalianoResponse" type="tns:getDesafioItalianoResponse" />
+  <xs:element name="getIdGanhador" type="tns:getIdGanhador" />
+  <xs:element name="getIdGanhadorResponse" type="tns:getIdGanhadorResponse" />
+  <xs:element name="getJogadorVendedor" type="tns:getJogadorVendedor" />
+  <xs:element name="getJogadorVendedorResponse" type="tns:getJogadorVendedorResponse" />
+  <xs:element name="getPlacarGeral" type="tns:getPlacarGeral" />
+  <xs:element name="getPlacarGeralResponse" type="tns:getPlacarGeralResponse" />
+  <xs:element name="getPlacarIndividual" type="tns:getPlacarIndividual" />
+  <xs:element name="getPlacarIndividualResponse" type="tns:getPlacarIndividualResponse" />
+  <xs:element name="getQtdJogadores" type="tns:getQtdJogadores" />
+  <xs:element name="getQtdJogadoresResponse" type="tns:getQtdJogadoresResponse" />
+  <xs:element name="getRegras" type="tns:getRegras" />
+  <xs:element name="getRegrasResponse" type="tns:getRegrasResponse" />
+  <xs:element name="getStatus" type="tns:getStatus" />
+  <xs:element name="getStatusResponse" type="tns:getStatusResponse" />
+  <xs:element name="jogadorEliminado" type="tns:jogadorEliminado" />
+  <xs:element name="jogadorEliminadoResponse" type="tns:jogadorEliminadoResponse" />
+  <xs:element name="lancarDesafio" type="tns:lancarDesafio" />
+  <xs:element name="lancarDesafioResponse" type="tns:lancarDesafioResponse" />
+  <xs:element name="listarJogadores" type="tns:listarJogadores" />
+  <xs:element name="listarJogadoresResponse" type="tns:listarJogadoresResponse" />
+  <xs:element name="registrar" type="tns:registrar" />
+  <xs:element name="registrarResponse" type="tns:registrarResponse" />
+  <xs:element name="removerJogador" type="tns:removerJogador" />
+  <xs:element name="removerJogadorResponse" type="tns:removerJogadorResponse" />
+  <xs:element name="resetAdmin" type="tns:resetAdmin" />
+  <xs:element name="resetAdminResponse" type="tns:resetAdminResponse" />
+  <xs:element name="resetGame" type="tns:resetGame" />
+  <xs:element name="resetGameResponse" type="tns:resetGameResponse" />
+  <xs:element name="setIdJogador" type="tns:setIdJogador" />
+  <xs:element name="setIdJogadorResponse" type="tns:setIdJogadorResponse" />
+  <xs:element name="setNewDesafioItaliano" type="tns:setNewDesafioItaliano" />
+  <xs:element name="setNewDesafioItalianoResponse" type="tns:setNewDesafioItalianoResponse" />
+  <xs:element name="setStatus" type="tns:setStatus" />
+  <xs:element name="setStatusResponse" type="tns:setStatusResponse" />
+  <xs:element name="ultimoId" type="tns:ultimoId" />
+  <xs:element name="ultimoIdResponse" type="tns:ultimoIdResponse" />
+  <xs:complexType name="adminJogo">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="adminJogoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setNewDesafioItaliano">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setNewDesafioItalianoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getDesafioItaliano">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getDesafioItalianoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="desistirJogo">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="desistirJogoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="checarResposta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element name="arg1" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="checarRespostaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="jogadorEliminado">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="jogadorEliminadoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setIdJogador">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="setIdJogadorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ultimoId">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ultimoIdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getQtdJogadores">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getQtdJogadoresResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRegras">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getRegrasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="lancarDesafio">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="lancarDesafioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="resetGame">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="resetGameResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getPlacarIndividual">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPlacarIndividualResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="resetAdmin">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="resetAdminResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getPlacarGeral">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getPlacarGeralResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:jogadorTradutor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="jogadorTradutor">
+    <xs:sequence>
+      <xs:element name="idJogador" type="xs:int" />
+      <xs:element minOccurs="0" name="nome" type="xs:string" />
+      <xs:element name="pontuacao" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarJogadores">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarJogadoresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getJogadorVendedor">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getJogadorVendedorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="gameOver">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="gameOverResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getStatus">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getStatusResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getIdGanhador">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getIdGanhadorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setStatus">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setStatusResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="removerJogador">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removerJogadorResponse">
+    <xs:sequence />
+  </xs:complexType>
+</xs:schema>

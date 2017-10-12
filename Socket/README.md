@@ -1,0 +1,14 @@
+Titulo: Dicionario Italiano
+
+Descriçao: Jogo no qual os participantes precisam descrever corretamente o significado da palavra em italiano para portugues. 
+Aquele que obtiver o maior numero de pontos no final do jogo, ou conseguir a marca de 50 pontos, a qualquer momento
+do jogo, ganha.
+
+Minimo 2 Maximo 5 jogadores. 
+
+Regras:
+Cada jogador irás iniciar o jogo com 25 pontos. A cada tentativa errada de traduzir uma palavra, o jogador perde 1 ponto. 
+O jogador que responder corretamente a palavra da rodada, ganha 1 ponto fixo e mais 1 ponto de cada um dos demais jogadores.
+Ou seja, os jogadores perdedores da rodada, perderão 1 ponto cada. Caso um jogador tenha seus pontos zerados, ele é 
+eliminado do jogo. Caso um jogador obtenha 50 pontos, o jogo termina automaticamente, e esse jogador ganha o jogo.
+

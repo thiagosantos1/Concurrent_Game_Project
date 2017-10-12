@@ -1,0 +1,11 @@
+c:\users\admin\documents\visual studio 2010\Projects\Cliente\Cliente\bin\Debug\Cliente.exe
+c:\users\admin\documents\visual studio 2010\Projects\Cliente\Cliente\bin\Debug\Cliente.pdb
+c:\users\admin\documents\visual studio 2010\Projects\Cliente\Cliente\bin\Debug\Cliente.xml
+c:\users\admin\documents\visual studio 2010\Projects\Cliente\Cliente\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2010\Projects\Cliente\Cliente\obj\x86\Debug\Cliente.Resources.resources
+c:\users\admin\documents\visual studio 2010\Projects\Cliente\Cliente\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\admin\documents\visual studio 2010\Projects\Cliente\Cliente\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\admin\documents\visual studio 2010\Projects\Cliente\Cliente\obj\x86\Debug\Cliente.exe
+c:\users\admin\documents\visual studio 2010\Projects\Cliente\Cliente\obj\x86\Debug\Cliente.xml
+c:\users\admin\documents\visual studio 2010\Projects\Cliente\Cliente\obj\x86\Debug\Cliente.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\Cliente\Cliente\bin\Debug\Cliente.exe.config

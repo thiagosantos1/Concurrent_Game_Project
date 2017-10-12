@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://projeto_2/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="JogoTradutorItalianoService" targetNamespace="http://projeto_2/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8081/WebServices/jogo?xsd=1" namespace="http://projeto_2/" />
+    </xsd:schema>
+  </types>
+  <message name="resetAdmin">
+    <part name="parameters" element="tns:resetAdmin" />
+  </message>
+  <message name="resetAdminResponse">
+    <part name="parameters" element="tns:resetAdminResponse" />
+  </message>
+  <message name="gameOver">
+    <part name="parameters" element="tns:gameOver" />
+  </message>
+  <message name="gameOverResponse">
+    <part name="parameters" element="tns:gameOverResponse" />
+  </message>
+  <message name="ultimoId">
+    <part name="parameters" element="tns:ultimoId" />
+  </message>
+  <message name="ultimoIdResponse">
+    <part name="parameters" element="tns:ultimoIdResponse" />
+  </message>
+  <message name="getPlacarGeral">
+    <part name="parameters" element="tns:getPlacarGeral" />
+  </message>
+  <message name="getPlacarGeralResponse">
+    <part name="parameters" element="tns:getPlacarGeralResponse" />
+  </message>
+  <message name="getRegras">
+    <part name="parameters" element="tns:getRegras" />
+  </message>
+  <message name="getRegrasResponse">
+    <part name="parameters" element="tns:getRegrasResponse" />
+  </message>
+  <message name="lancarDesafio">
+    <part name="parameters" element="tns:lancarDesafio" />
+  </message>
+  <message name="lancarDesafioResponse">
+    <part name="parameters" element="tns:lancarDesafioResponse" />
+  </message>
+  <message name="getQtdJogadores">
+    <part name="parameters" element="tns:getQtdJogadores" />
+  </message>
+  <message name="getQtdJogadoresResponse">
+    <part name="parameters" element="tns:getQtdJogadoresResponse" />
+  </message>
+  <message name="adminJogo">
+    <part name="parameters" element="tns:adminJogo" />
+  </message>
+  <message name="adminJogoResponse">
+    <part name="parameters" element="tns:adminJogoResponse" />
+  </message>
+  <message name="registrar">
+    <part name="parameters" element="tns:registrar" />
+  </message>
+  <message name="registrarResponse">
+    <part name="parameters" element="tns:registrarResponse" />
+  </message>
+  <message name="getStatus">
+    <part name="parameters" element="tns:getStatus" />
+  </message>
+  <message name="getStatusResponse">
+    <part name="parameters" element="tns:getStatusResponse" />
+  </message>
+  <message name="setStatus">
+    <part name="parameters" element="tns:setStatus" />
+  </message>
+  <message name="setStatusResponse">
+    <part name="parameters" element="tns:setStatusResponse" />
+  </message>
+  <message name="removerJogador">
+    <part name="parameters" element="tns:removerJogador" />
+  </message>
+  <message name="removerJogadorResponse">
+    <part name="parameters" element="tns:removerJogadorResponse" />
+  </message>
+  <message name="checarResposta">
+    <part name="parameters" element="tns:checarResposta" />
+  </message>
+  <message name="checarRespostaResponse">
+    <part name="parameters" element="tns:checarRespostaResponse" />
+  </message>
+  <message name="jogadorEliminado">
+    <part name="parameters" element="tns:jogadorEliminado" />
+  </message>
+  <message name="jogadorEliminadoResponse">
+    <part name="parameters" element="tns:jogadorEliminadoResponse" />
+  </message>
+  <message name="setIdJogador">
+    <part name="parameters" element="tns:setIdJogador" />
+  </message>
+  <message name="setIdJogadorResponse">
+    <part name="parameters" element="tns:setIdJogadorResponse" />
+  </message>
+  <message name="listarJogadores">
+    <part name="parameters" element="tns:listarJogadores" />
+  </message>
+  <message name="listarJogadoresResponse">
+    <part name="parameters" element="tns:listarJogadoresResponse" />
+  </message>
+  <message name="desistirJogo">
+    <part name="parameters" element="tns:desistirJogo" />
+  </message>
+  <message name="desistirJogoResponse">
+    <part name="parameters" element="tns:desistirJogoResponse" />
+  </message>
+  <message name="getIdGanhador">
+    <part name="parameters" element="tns:getIdGanhador" />
+  </message>
+  <message name="getIdGanhadorResponse">
+    <part name="parameters" element="tns:getIdGanhadorResponse" />
+  </message>
+  <message name="resetGame">
+    <part name="parameters" element="tns:resetGame" />
+  </message>
+  <message name="resetGameResponse">
+    <part name="parameters" element="tns:resetGameResponse" />
+  </message>
+  <message name="getPlacarIndividual">
+    <part name="parameters" element="tns:getPlacarIndividual" />
+  </message>
+  <message name="getPlacarIndividualResponse">
+    <part name="parameters" element="tns:getPlacarIndividualResponse" />
+  </message>
+  <message name="setNewDesafioItaliano">
+    <part name="parameters" element="tns:setNewDesafioItaliano" />
+  </message>
+  <message name="setNewDesafioItalianoResponse">
+    <part name="parameters" element="tns:setNewDesafioItalianoResponse" />
+  </message>
+  <message name="getDesafioItaliano">
+    <part name="parameters" element="tns:getDesafioItaliano" />
+  </message>
+  <message name="getDesafioItalianoResponse">
+    <part name="parameters" element="tns:getDesafioItalianoResponse" />
+  </message>
+  <message name="getJogadorVendedor">
+    <part name="parameters" element="tns:getJogadorVendedor" />
+  </message>
+  <message name="getJogadorVendedorResponse">
+    <part name="parameters" element="tns:getJogadorVendedorResponse" />
+  </message>
+  <portType name="JogoTradutorItaliano">
+    <operation name="resetAdmin">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/resetAdminRequest" message="tns:resetAdmin" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/resetAdminResponse" message="tns:resetAdminResponse" />
+    </operation>
+    <operation name="gameOver">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/gameOverRequest" message="tns:gameOver" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/gameOverResponse" message="tns:gameOverResponse" />
+    </operation>
+    <operation name="ultimoId">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/ultimoIdRequest" message="tns:ultimoId" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/ultimoIdResponse" message="tns:ultimoIdResponse" />
+    </operation>
+    <operation name="getPlacarGeral">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/getPlacarGeralRequest" message="tns:getPlacarGeral" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/getPlacarGeralResponse" message="tns:getPlacarGeralResponse" />
+    </operation>
+    <operation name="getRegras">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/getRegrasRequest" message="tns:getRegras" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/getRegrasResponse" message="tns:getRegrasResponse" />
+    </operation>
+    <operation name="lancarDesafio">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/lancarDesafioRequest" message="tns:lancarDesafio" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/lancarDesafioResponse" message="tns:lancarDesafioResponse" />
+    </operation>
+    <operation name="getQtdJogadores">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/getQtdJogadoresRequest" message="tns:getQtdJogadores" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/getQtdJogadoresResponse" message="tns:getQtdJogadoresResponse" />
+    </operation>
+    <operation name="adminJogo">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/adminJogoRequest" message="tns:adminJogo" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/adminJogoResponse" message="tns:adminJogoResponse" />
+    </operation>
+    <operation name="registrar">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/registrarRequest" message="tns:registrar" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/registrarResponse" message="tns:registrarResponse" />
+    </operation>
+    <operation name="getStatus">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/getStatusRequest" message="tns:getStatus" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/getStatusResponse" message="tns:getStatusResponse" />
+    </operation>
+    <operation name="setStatus">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/setStatusRequest" message="tns:setStatus" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/setStatusResponse" message="tns:setStatusResponse" />
+    </operation>
+    <operation name="removerJogador">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/removerJogadorRequest" message="tns:removerJogador" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/removerJogadorResponse" message="tns:removerJogadorResponse" />
+    </operation>
+    <operation name="checarResposta">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/checarRespostaRequest" message="tns:checarResposta" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/checarRespostaResponse" message="tns:checarRespostaResponse" />
+    </operation>
+    <operation name="jogadorEliminado">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/jogadorEliminadoRequest" message="tns:jogadorEliminado" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/jogadorEliminadoResponse" message="tns:jogadorEliminadoResponse" />
+    </operation>
+    <operation name="setIdJogador">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/setIdJogadorRequest" message="tns:setIdJogador" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/setIdJogadorResponse" message="tns:setIdJogadorResponse" />
+    </operation>
+    <operation name="listarJogadores">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/listarJogadoresRequest" message="tns:listarJogadores" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/listarJogadoresResponse" message="tns:listarJogadoresResponse" />
+    </operation>
+    <operation name="desistirJogo">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/desistirJogoRequest" message="tns:desistirJogo" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/desistirJogoResponse" message="tns:desistirJogoResponse" />
+    </operation>
+    <operation name="getIdGanhador">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/getIdGanhadorRequest" message="tns:getIdGanhador" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/getIdGanhadorResponse" message="tns:getIdGanhadorResponse" />
+    </operation>
+    <operation name="resetGame">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/resetGameRequest" message="tns:resetGame" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/resetGameResponse" message="tns:resetGameResponse" />
+    </operation>
+    <operation name="getPlacarIndividual">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/getPlacarIndividualRequest" message="tns:getPlacarIndividual" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/getPlacarIndividualResponse" message="tns:getPlacarIndividualResponse" />
+    </operation>
+    <operation name="setNewDesafioItaliano">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/setNewDesafioItalianoRequest" message="tns:setNewDesafioItaliano" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/setNewDesafioItalianoResponse" message="tns:setNewDesafioItalianoResponse" />
+    </operation>
+    <operation name="getDesafioItaliano">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/getDesafioItalianoRequest" message="tns:getDesafioItaliano" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/getDesafioItalianoResponse" message="tns:getDesafioItalianoResponse" />
+    </operation>
+    <operation name="getJogadorVendedor">
+      <input wsam:Action="http://projeto_2/JogoTradutorItaliano/getJogadorVendedorRequest" message="tns:getJogadorVendedor" />
+      <output wsam:Action="http://projeto_2/JogoTradutorItaliano/getJogadorVendedorResponse" message="tns:getJogadorVendedorResponse" />
+    </operation>
+  </portType>
+  <binding name="JogoTradutorItalianoPortBinding" type="tns:JogoTradutorItaliano">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="resetAdmin">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="gameOver">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ultimoId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPlacarGeral">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getRegras">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="lancarDesafio">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getQtdJogadores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="adminJogo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="registrar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getStatus">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setStatus">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="removerJogador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="checarResposta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="jogadorEliminado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setIdJogador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarJogadores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="desistirJogo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getIdGanhador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="resetGame">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPlacarIndividual">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setNewDesafioItaliano">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDesafioItaliano">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getJogadorVendedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="JogoTradutorItalianoService">
+    <port name="JogoTradutorItalianoPort" binding="tns:JogoTradutorItalianoPortBinding">
+      <soap:address location="http://localhost:8081/WebServices/jogo" />
+    </port>
+  </service>
+</definitions>
